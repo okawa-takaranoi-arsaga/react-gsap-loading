@@ -5,6 +5,7 @@ import "../assets/css/Loading.css";
 const str = "Loading...";
 
 const Loading = () => {
+  // DOMが揃ってから1度だけ実行するために、useEffect内で実行する
   useEffect(() => {
     const tween = gsap.timeline({ repeat: -1 });
     tween
