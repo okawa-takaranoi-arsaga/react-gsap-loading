@@ -6,7 +6,6 @@ git clone git@github.com:okawa-takaranoi-arsaga/react-gsap-loading.git
 npm i
 
 npm run start
-
 ```
 
 ## サンプルローディングの切り替え
