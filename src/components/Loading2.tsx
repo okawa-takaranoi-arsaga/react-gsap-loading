@@ -7,19 +7,20 @@ const Loading2 = () => {
   const smokeCount = Array<number>(20).fill(0);
 
   useEffect(() => {
+    // 全体の移動　右から左へ
     gsap.fromTo(
       ".top",
-      9,
       {
         x: "200px",
         repeat: -1,
       },
       {
         x: "-200px",
+        duration: 9,
         repeat: -1,
       }
     );
-
+    // 煙のアニメーション
     gsap.from(".smoke", {
       duration: 3,
       scale: 0,
@@ -31,9 +32,10 @@ const Loading2 = () => {
       repeat: -1,
     });
 
+    // トラック画像のバウンド
     gsap.to(".img", {
       duration: 2,
-      y: "random(0, 30)", // x軸にランダムな値を追加
+      y: "random(0, 30)", // x軸にランダムな値
       ease: Bounce.easeOut,
       repeat: -1,
       yoyo: true,

@@ -10,6 +10,7 @@ const App = () => {
   return (
     <div>
       <Suspense fallback={<Loading />}>
+        {/* <Suspense fallback={<Loading2 />}> */}
         <Suspend>
           <div className="search">
             <button onClick={() => setIsResult((prev) => !prev)}>

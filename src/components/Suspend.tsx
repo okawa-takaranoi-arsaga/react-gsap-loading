@@ -11,8 +11,8 @@ const Suspend = (props: SuspensedProps) => {
     return new Promise((resolve) => setTimeout(resolve, ms));
   };
 
-  if (Math.random() < 0.3) {
-    throw sleep(3000);
+  if (Math.random() < 0.5) {
+    throw sleep(10000);
   }
   return <div>{children}</div>;
 };
