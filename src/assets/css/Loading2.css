@@ -8,7 +8,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
 
 .img {
@@ -17,15 +17,21 @@
   position: relative;
 }
 
-.smoke{
+.smoke {
   width: 20px;
   height: 20px;
-  background-color: #fff;
   border-radius: 50%;
+
   position: absolute;
+  z-index: -10;
+  /* 終了時の位置：右から-150pxの位置 */
   right: -150px;
   bottom: 20px;
-  z-index: -10;
+  /* 終了時の大きさ：scale 1
+  デフォルトで1なので記載の必要は無い。 */
+
+  /* 終了時のカラー： 白 */
+  background-color: #fff;
 }
 
 .text {

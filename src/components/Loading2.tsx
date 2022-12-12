@@ -20,13 +20,13 @@ const Loading2 = () => {
         repeat: -1,
       }
     );
+
     // 煙のアニメーション
     gsap.from(".smoke", {
-      duration: 3,
-      scale: 0,
-      right: 0,
-      bottom: 20,
-      backgroundColor: "#4b4b4b",
+      duration: 3, // アニメーション時間
+      scale: 0, // 大きさが0からスタート
+      right: 0, // 右から0pxからスタート
+      backgroundColor: "#4b4b4b", // グレーからスタート
       ease: Power2.easeInOut,
       stagger: 0.3, // 順番に要素をアニメーションさせる
       repeat: -1,
@@ -46,9 +46,10 @@ const Loading2 = () => {
     <div className="loading">
       <div className="top">
         <img src={Track} alt="track" className="img" />
-        {smokeCount.map((_, index) => {
-          return <div key={index} className="smoke" />;
-        })}
+
+        {smokeCount.map((_, index) => (
+          <div key={index} className="smoke" />
+        ))}
       </div>
       <p className="text">Loading...</p>
     </div>
